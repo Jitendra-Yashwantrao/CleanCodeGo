@@ -19,3 +19,8 @@ func (c Customer) Statement() string {
 	result += "\tYou earned " + fmt.Sprintf("%v", c.rentals.totalRenterPointsFor()) + " frequent renter points"
 	return result
 }
+
+func (c Customer) HTMLStatement() string {
+
+	return ""
+}
