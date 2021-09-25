@@ -27,6 +27,10 @@ func (c Customer) Statement() string {
 		thisAmount := amountFor(rental)
 		result += "\t" + rental.getMovie().getTitle() + "\t" +
 			fmt.Sprintf("%f", thisAmount) + "\n"
+	}
+
+	for _, rental := range c.rentals {
+		thisAmount := amountFor(rental)
 		totalAmount += thisAmount
 	}
 
