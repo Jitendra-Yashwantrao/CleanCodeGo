@@ -8,7 +8,7 @@ import (
 func TestCustomer_Statement(t *testing.T) {
 	type CustomerTest struct {
 		name    string
-		rentals []Rental
+		rentals Rentals
 	}
 
 	tests := []struct {
@@ -18,10 +18,10 @@ func TestCustomer_Statement(t *testing.T) {
 	}{
 
 		{name: "Should return statment for customer of ",
-			fields: CustomerTest{name: "Jitendra", rentals: []Rental{
+			fields: CustomerTest{name: "Jitendra", rentals: Rentals{rentals: []Rental{
 				{daysRented: 7, movie: Movie{title: "IceAge", priceCode: Movie_CHILDRENS}},
 				{daysRented: 6, movie: Movie{title: "Temrminator", priceCode: Movie_REGULAR}},
-				{daysRented: 5, movie: Movie{title: "Happy Minds", priceCode: Movie_NEW_RELEASE}}}},
+				{daysRented: 5, movie: Movie{title: "Happy Minds", priceCode: Movie_NEW_RELEASE}}}}},
 			want: `Rental Record for Jitendra
 	IceAge	7.500000
 	Temrminator	8.000000

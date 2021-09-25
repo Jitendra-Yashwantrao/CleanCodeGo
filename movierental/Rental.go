@@ -4,6 +4,25 @@ type Rental struct {
 	movie      Movie
 	daysRented int
 }
+type Rentals struct {
+	rentals []Rental
+}
+
+func (rs Rentals) totalRenterPointsFor() int {
+	frequentRenterPoints := 0
+	for _, rental := range rs.rentals {
+		frequentRenterPoints += rental.renterPointFor()
+	}
+	return frequentRenterPoints
+}
+
+func (rs Rentals) totalAmountForRentals() float64 {
+	var totalAmount float64
+	for _, rental := range rs.rentals {
+		totalAmount += rental.amount()
+	}
+	return totalAmount
+}
 
 func (r Rental) amount() float64 {
 	var amount float64
