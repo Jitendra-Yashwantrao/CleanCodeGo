@@ -18,27 +18,35 @@ func (c Customer) getName() string {
 func (c Customer) Statement() string {
 
 	var totalAmount float64
-	frequentRenterPoints := 0
 	result := "Rental Record for " + c.getName() + "\n"
-	for _, rental := range c.rentals {
-		frequentRenterPoints += renterPointFor(rental)
-	}
-	for _, rental := range c.rentals {
-		thisAmount := amountFor(rental)
-		result += "\t" + rental.getMovie().getTitle() + "\t" +
-			fmt.Sprintf("%f", thisAmount) + "\n"
-	}
 
 	for _, rental := range c.rentals {
-		thisAmount := amountFor(rental)
-		totalAmount += thisAmount
+		result += "\t" + rental.getMovie().getTitle() + "\t" +
+			fmt.Sprintf("%f", amountFor(rental)) + "\n"
 	}
+
+	totalAmount = totalAmountForRentals(c.rentals)
 
 	result += "\tAmount owed is " + fmt.Sprintf("%f", totalAmount) + "\n"
-	result += "\tYou earned " + fmt.Sprintf("%v", frequentRenterPoints) + " frequent renter points"
+	result += "\tYou earned " + fmt.Sprintf("%v", totalRenterPointsFor(c.rentals)) + " frequent renter points"
 	return result
 }
 
+func totalRenterPointsFor(rentals []Rental) int {
+	frequentRenterPoints := 0
+	for _, rental := range rentals {
+		frequentRenterPoints += renterPointFor(rental)
+	}
+	return frequentRenterPoints
+}
+
+func totalAmountForRentals(rentals []Rental) float64 {
+	var totalAmount float64
+	for _, rental := range rentals {
+		totalAmount += amountFor(rental)
+	}
+	return totalAmount
+}
 func renterPointFor(rental Rental) int {
 	frequentRenterPoints := 1
 	if rental.getMovie().getPriceCode() == Movie_NEW_RELEASE && rental.getDaysRented() > 1 {
