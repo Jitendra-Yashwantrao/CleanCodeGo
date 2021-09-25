@@ -20,36 +20,18 @@ func (c Customer) Statement() string {
 	var totalAmount float64
 	frequentRenterPoints := 0
 	result := "Rental Record for " + c.getName() + "\n"
-	for _, each := range c.rentals {
-		var thisAmount float64
-		//determine amounts for each line
-		switch each.getMovie().getPriceCode() {
-		case Movie_REGULAR:
-			thisAmount += 2
-			if each.getDaysRented() > 2 {
-				thisAmount += (float64(each.getDaysRented()) - 2) * 1.5
-			}
-			break
-		case Movie_NEW_RELEASE:
-			thisAmount += float64(each.getDaysRented()) * 3
-			break
-		case Movie_CHILDRENS:
-			thisAmount += 1.5
-			if each.getDaysRented() > 3 {
-				thisAmount += (float64(each.getDaysRented()) - 3) * 1.5
+	for _, rental := range c.rentals {
+		thisAmount := amountFor(rental)
 
-			}
-			break
-		}
 		// add frequent renter points
 		frequentRenterPoints++
 		// add bonus for a two day new release rental
-		if each.getMovie().getPriceCode() == Movie_NEW_RELEASE && each.getDaysRented() > 1 {
+		if rental.getMovie().getPriceCode() == Movie_NEW_RELEASE && rental.getDaysRented() > 1 {
 			frequentRenterPoints++
 		}
 
 		//show figures for this rental
-		result += "\t" + each.getMovie().getTitle() + "\t" +
+		result += "\t" + rental.getMovie().getTitle() + "\t" +
 			fmt.Sprintf("%f", thisAmount) + "\n"
 		totalAmount += thisAmount
 	}
@@ -57,4 +39,27 @@ func (c Customer) Statement() string {
 	result += "\tAmount owed is " + fmt.Sprintf("%f", totalAmount) + "\n"
 	result += "\tYou earned " + fmt.Sprintf("%v", frequentRenterPoints) + " frequent renter points"
 	return result
+}
+
+func amountFor(rental Rental) float64 {
+	var amount float64
+	switch rental.getMovie().getPriceCode() {
+	case Movie_REGULAR:
+		amount += 2
+		if rental.getDaysRented() > 2 {
+			amount += (float64(rental.getDaysRented()) - 2) * 1.5
+		}
+		break
+	case Movie_NEW_RELEASE:
+		amount += float64(rental.getDaysRented()) * 3
+		break
+	case Movie_CHILDRENS:
+		amount += 1.5
+		if rental.getDaysRented() > 3 {
+			amount += (float64(rental.getDaysRented()) - 3) * 1.5
+
+		}
+		break
+	}
+	return amount
 }
