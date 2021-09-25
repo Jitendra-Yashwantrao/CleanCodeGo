@@ -10,16 +10,3 @@ type Movie struct {
 	title     string
 	priceCode int
 }
-
-func (m Movie) getPriceCode() int {
-	return m.priceCode
-}
-
-func (m Movie) getTitle() string {
-	return m.title
-}
-
-func (m Movie) setPriceCode(code int) {
-
-	m.priceCode = code
-}

@@ -7,21 +7,13 @@ type Customer struct {
 	rentals []Rental
 }
 
-func (c Customer) addRental(arg Rental) {
-	c.rentals = append(c.rentals, arg)
-}
-
-func (c Customer) getName() string {
-	return c.name
-}
-
 func (c Customer) Statement() string {
 
 	var totalAmount float64
-	result := "Rental Record for " + c.getName() + "\n"
+	result := "Rental Record for " + c.name + "\n"
 
 	for _, rental := range c.rentals {
-		result += "\t" + rental.getMovie().getTitle() + "\t" +
+		result += "\t" + rental.movie.title + "\t" +
 			fmt.Sprintf("%f", rental.amount()) + "\n"
 	}
 
