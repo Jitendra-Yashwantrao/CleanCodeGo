@@ -12,11 +12,11 @@ Rental Record for Jitendra
   
  #Rquirement -Print Statement in html format as copied below 
   
-  `<h1>Rental Record for <em>Jitendra</em></h1>
-<table>
-  <tr><td>IceAge</td><td>7.500000</td></tr>
-  <tr><td>Temrminator</td><td>8.000000</td></tr>
-    <tr><td>Happy Minds</td><td>15.000000</td></tr>
-</table>
-<p>Amount owed is <em>30.500000</em></p>
-<p>You earned <em>4</em> frequent renter points</p>`
+  `<h1>`Rental Record for `<em>`Jitendra`</em></h1>`
+`<table>
+  <tr><td>`IceAge`</td><td>`7.500000`</td></tr>`
+  `<tr><td>`Temrminator`</td><td>`8.000000`</td></tr>`
+    `<tr><td>`Happy Minds`</td><td>`15.000000`</td></tr>
+</table>`
+`<p>`Amount owed is `<em>`30.500000`</em></p>`
+`<p>`You earned `<em>`4`</em>` frequent renter points`</p>`
