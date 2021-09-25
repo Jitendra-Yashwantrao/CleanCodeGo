@@ -50,11 +50,11 @@ func (c Customer) Statement() string {
 
 		//show figures for this rental
 		result += "\t" + each.getMovie().getTitle() + "\t" +
-			fmt.Sprintf("%f",thisAmount) + "\n"
+			fmt.Sprintf("%f", thisAmount) + "\n"
 		totalAmount += thisAmount
 	}
 	//add footer lines result
-	result += "Amount owed is " + fmt.Sprintf("%f",totalAmount) + "\n"
-	result += "You earned " + string(frequentRenterPoints) + " frequent renter points"
+	result += "\tAmount owed is " + fmt.Sprintf("%f", totalAmount) + "\n"
+	result += "\tYou earned " + fmt.Sprintf("%v", frequentRenterPoints) + " frequent renter points"
 	return result
 }

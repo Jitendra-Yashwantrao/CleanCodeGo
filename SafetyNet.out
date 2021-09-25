@@ -1,0 +1,21 @@
+mode: set
+cleancode/movierental/Customer.go:10.41,12.2 1 0
+cleancode/movierental/Customer.go:14.36,16.2 1 1
+cleancode/movierental/Customer.go:18.38,23.33 4 1
+cleancode/movierental/Customer.go:57.2,59.15 3 1
+cleancode/movierental/Customer.go:23.33,26.41 2 1
+cleancode/movierental/Customer.go:45.3,47.86 2 1
+cleancode/movierental/Customer.go:52.3,54.28 2 1
+cleancode/movierental/Customer.go:27.22,29.32 2 1
+cleancode/movierental/Customer.go:32.4,32.9 1 1
+cleancode/movierental/Customer.go:33.26,35.9 2 1
+cleancode/movierental/Customer.go:36.24,38.32 2 1
+cleancode/movierental/Customer.go:42.4,42.9 1 1
+cleancode/movierental/Customer.go:29.32,31.5 1 1
+cleancode/movierental/Customer.go:38.32,41.5 1 1
+cleancode/movierental/Customer.go:47.86,49.4 1 1
+cleancode/movierental/Movie.go:14.35,16.2 1 1
+cleancode/movierental/Movie.go:18.34,20.2 1 1
+cleancode/movierental/Movie.go:22.39,25.2 1 0
+cleancode/movierental/Rental.go:9.37,11.2 1 1
+cleancode/movierental/Rental.go:13.34,15.2 1 1
