@@ -1,0 +1,102 @@
+commit 12fa2dd157af8b7d04ac14d572928edeee6cbe96
+Author: Jitendra Yashwantrao <jitendra@Jitendras-MacBook-Pro.local>
+Date:   Sat Sep 25 20:29:48 2021 +0530
+
+    Coding Hat- Adding New fuctinality - HTMLStatement
+
+commit 19d7f0db5f8ad6c9b26e4250c6f9753ab2b2e595
+Author: Jitendra Yashwantrao <jitendra@Jitendras-MacBook-Pro.local>
+Date:   Sat Sep 25 20:05:05 2021 +0530
+
+    Coding Hat- Adding New fuctinality -  Adding testcase for new HTMLStatement
+
+commit e677436f5394979f43e81d025d009b0c0df99ad7
+Author: Jitendra Yashwantrao <jitendra@Jitendras-MacBook-Pro.local>
+Date:   Sat Sep 25 20:03:31 2021 +0530
+
+    Refactoring Hat- Adding testcase for methods moved into  rental structs
+
+commit ab301d1a6765a0338867e59727efbf621c664128
+Author: Jitendra Yashwantrao <jitendra@Jitendras-MacBook-Pro.local>
+Date:   Sat Sep 25 19:07:46 2021 +0530
+
+    Code Smell -Feature Envy - moved methods totalRenterPointsFor, totalAmountForRentals to new type
+
+commit 97ac2161a67288d5557b085f447c425e22702483
+Author: Jitendra Yashwantrao <jitendra@Jitendras-MacBook-Pro.local>
+Date:   Sat Sep 25 18:48:07 2021 +0530
+
+    Code Smell -Speculative generality - removed unused methods from customer and movie structs
+    replaced private methods with props
+
+commit 6f0f2ed14107286049d3c07baa62cd0b1590ae3d
+Author: Jitendra Yashwantrao <jitendra@Jitendras-MacBook-Pro.local>
+Date:   Sat Sep 25 18:34:27 2021 +0530
+
+    Code Smell - Feature envy - moving rentalPointFor and amountFor methods to rental struct
+
+commit fdbedcbb27cfc5467557cebc45eef7c471e588e3
+Author: Jitendra Yashwantrao <jitendra@Jitendras-MacBook-Pro.local>
+Date:   Sat Sep 25 18:01:40 2021 +0530
+
+    CodeSmell- Long method Statement - extracting smaller methods
+
+commit 56d29502f5c82a25680c7b3da9173099cf2f6e2b
+Author: Jitendra Yashwantrao <jitendra@Jitendras-MacBook-Pro.local>
+Date:   Sat Sep 25 17:30:12 2021 +0530
+
+    CodeSmell- Long method Statement - getting rid of mutable variable total amount
+
+commit 941144f58086dd8172ac0d9ada985a99ab4abd7c
+Author: Jitendra Yashwantrao <jitendra@Jitendras-MacBook-Pro.local>
+Date:   Sat Sep 25 17:08:42 2021 +0530
+
+    CodeSmell- Long method Statement - extracted method renterPointsFor
+
+commit 5261474de5f4044d3bdb0c0a4b9f47d1b4dc7cbb
+Author: Jitendra Yashwantrao <jitendra@Jitendras-MacBook-Pro.local>
+Date:   Sat Sep 25 17:03:10 2021 +0530
+
+    CodeSmell- Long method Statement - extracted method amountFor
+
+commit c8eec78dff76eb870b62d3d817de9ae5eb49059d
+Author: Jitendra Yashwantrao <jitendra.yashwantrao@gmail.com>
+Date:   Sat Sep 25 14:19:09 2021 +0530
+
+    Update README.md
+
+commit f8d9681c353bb9d43e4f86ed3ffafe1b30db8d59
+Author: Jitendra Yashwantrao <jitendra.yashwantrao@gmail.com>
+Date:   Sat Sep 25 14:18:10 2021 +0530
+
+    Update README.md
+    
+    corrected expected format
+
+commit b14c224a8902b1cac7dd0b9d2b4657f5a871fd80
+Author: Jitendra Yashwantrao <jitendra.yashwantrao@gmail.com>
+Date:   Sat Sep 25 14:08:30 2021 +0530
+
+    Update README.md
+    
+    updated  expected format
+
+commit 1f2bdaf353ba727f391d5095b69e78ecf260376d
+Author: Jitendra Yashwantrao <jitendra.yashwantrao@gmail.com>
+Date:   Sat Sep 25 14:07:23 2021 +0530
+
+    Create README.md
+    
+    Added requiremest
+
+commit 76fb63f343aa6e1e13645f622821221e72da9b2e
+Author: Jitendra Yashwantrao <jitendra@Jitendras-MacBook-Pro.local>
+Date:   Sat Sep 25 13:44:47 2021 +0530
+
+    Refactoring - adding safety net coverage for existing code before starting refactoring
+
+commit 91873e1fbbb0c5b1e2fe8623ff336e50c494bb63
+Author: Jitendra-Yashwantrao <jitendra.yashwantrao@gmail.com>
+Date:   Mon May 17 18:30:40 2021 +0530
+
+    Initial commit
